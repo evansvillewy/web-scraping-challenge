@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mars Facts</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid vertical-center">
+        <div class="container-fluid text-center">
+          <h1 class="display-4">Mission to Mars</h1>
+          <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a>
+        </div>
+    </div>
+    <div class="container-fluid pb-2">
+        <div class="row">
+            <div class="col-sm-12">
+                <h4>Latest Mars News</h4>
+                <h5>{{scraped_info.news_title}}</h5>
+                <p>{{scraped_info.news_paragraph}}</p>
+            </div>
+        </div>
+    </div>    
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12">
+                <div class="card">
+                    <div class="card-body">                
+                        <h4 class="card-title">Featured Mars Image</h4>
+                        <img class="card-img-bottom" src={{scraped_info.featured_image_url}} >
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <div class="card border-secondary">
+                    <div class="card-body">
+                        <h4>Current Weather on Mars</h4>
+                        <p>{{scraped_info.mars_weather}}</p>
+                    </div>
+                </div>
+                <div class="card border-secondary">
+                    <div class="card-body">
+                        <h4>Mars Facts</h4>
+                        {{scraped_info.mars_facts_table|safe}}
+                    </div>
+                </div>                          
+            </div>                      
+        </div>
+        <h2 align="center">Mars Hemispheres</h2>
+        <div class="row">
+            <!-- For loop logic of jinja template -->
+            {%for hemisphere in scraped_info.mars_hemispheres%} 
+            <div class="col-md-6 col-sm-12">
+                <div class="card p-2">
+                    <div class="card-body p-2">                
+                        <img class="card-img-top  p-2" src={{hemisphere.img_url}}>
+                        <h4 >{{hemisphere.title}}</h4>                    
+                    </div>
+                </div>
+            </div>
+            {%endfor%}             
+        </div>
+    </div>       
+</body>
+
+</html>
