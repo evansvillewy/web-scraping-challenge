@@ -22,7 +22,7 @@ Built a web application that scrapes various websites for data related to the Mi
 
 ### NASA Mars News
 
-* Scraped the [NASA Mars News Site](https://mars.nasa.gov/news/) and collect the latest News Title and Paragraph Text. Assign the text to variables that you can reference later.
+* Scraped the [NASA Mars News Site](https://mars.nasa.gov/news/) and collect the latest News Title and Paragraph Text. Assigned the text to variables that you can reference later.
 
 ### JPL Mars Space Images - Featured Image
 
@@ -40,7 +40,7 @@ Built a web application that scrapes various websites for data related to the Mi
 
 ### Mars Facts
 
-* Visited the Mars Facts webpage [here](https://space-facts.com/mars/) and use Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc.
+* Visited the Mars Facts webpage [here](https://space-facts.com/mars/) and used Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc.
 
 * Used Pandas to convert the data to a HTML table string.
 
@@ -52,7 +52,7 @@ Built a web application that scrapes various websites for data related to the Mi
 
 * Saved both the image url string for the full resolution hemisphere image, and the Hemisphere title containing the hemisphere name. Used a Python dictionary to store the data using the keys `img_url` and `title`.
 
-* Appended the dictionary with the image url string and the hemisphere title to a list. This list will contain one dictionary for each hemisphere.
+* Appended the dictionary with the image url string and the hemisphere title to a list. This list contains one dictionary for each hemisphere.
 
 - - -
 
