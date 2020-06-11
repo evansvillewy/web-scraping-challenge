@@ -57,9 +57,9 @@
             <!-- For loop logic of jinja template -->
             {%for hemisphere in scraped_info.mars_hemispheres%} 
             <div class="col-md-6 col-sm-12">
-                <div class="card p-2">
-                    <div class="card-body p-2">                
-                        <img class="card-img-top  p-2" src={{hemisphere.img_url}}>
+                <div class="card " style="width: 45rem; height: 46rem;">
+                    <div class="card-body ">                
+                        <img class="card-img-top img-fluid"  src={{hemisphere.img_url}}>
                         <h4 >{{hemisphere.title}}</h4>                    
                     </div>
                 </div>
